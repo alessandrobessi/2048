@@ -12,6 +12,7 @@ class PolicyNetwork:
         input_state = keras.Input(shape=(4, 4, 1,))
         # x = layers.Conv2D(256, kernel_size=(2, 2))(input_state)
         # x = layers.Conv2D(256, kernel_size=(2, 2))(x)
+
         x = layers.Flatten()(input_state)
         x = layers.Dense(2048, activation="relu")(x)
         x = layers.Dense(1024, activation="relu")(x)
